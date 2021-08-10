@@ -1,0 +1,331 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ----------------------------------------------------------------- */
+
+:root{
+    --primary: #00cc99;
+    --secondary: #f7f7f7;
+    --dark: #333;
+    --danger: #e12d80;
+    --space-sx: 5px;
+    --space-s: 10px;
+    --space-m: 20px;
+    --space-l: 30px;
+    --space-xl: 60px;
+  }
+  
+  *, *::before, *::after{
+    box-sizing: border-box;
+  }
+  
+  body{
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .title{
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .container{
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .nav{
+    background: var(--secondary);
+    display: flex;
+    justify-content: flex-end;  
+  }
+  
+  .nav_link a{
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .nav_link a:hover{
+    font-weight: bold;
+  }
+  
+  .nav_link img{
+    margin-right: var(--space-sx);
+  }
+  
+  .facebook{
+    color: #4460a0;
+    position: relative;
+  }
+  
+  .facebook:after{
+    content: "\00a0";
+    width: 2px;
+    height: 15px;
+    background: #ccc;
+    position: absolute;
+    right: 0;
+  }
+  
+  .twitter{
+    color: #00aaec;
+  }
+  
+  header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo{
+    width: 224px;
+    height: 50px;
+    display: block;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-image: url('https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/logo.png'); 
+  }
+  
+  .menu{
+    display: flex;
+  }
+  
+  .menu a{
+    color: var(--primary);
+    font-size: 1.25rem;
+    font-weight: bold;
+    display: block;
+    text-decoration: none;
+    padding: var(--space-m) 0;
+    margin: 0  var(--space-m);
+    border-bottom: 4px solid transparent;
+  }
+  
+  .menu a:hover{
+    border-bottom: 4px solid var(--primary);
+  }
+  
+  .banner{
+    width: 100%;
+    height: 346px;
+    background-image: url('https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/banner.png');
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--space-xl);
+  }
+  
+  .banner_title{
+    width: 100%;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: var(--space-m);
+    background-color: #0000007F;
+  }
+  
+  .course{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: var(--space-xl);
+  }
+  
+  .course_item{
+    width: 300px;
+    text-align: center;
+    padding: var(--space-m);
+    border-radius: 5px;
+    box-shadow: 2px 5px 5px 0px #00000020;
+    margin: 0 var(--space-s);
+  }
+  
+  .course_item h3{
+    width: 100%;
+    margin-bottom: var(--space-s);
+  }
+  
+  .course_item img{
+    height: 130px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    margin-bottom: var(--space-s);
+  }
+  
+  .course_item p{
+    text-align: left;
+  }
+  
+  .course_item ul{
+    text-align: left;
+    list-style-type: disc;
+    margin-left: var(--space-m);
+  }
+  
+  .compare{
+    margin-bottom: var(--space-xl);
+  }
+  
+  .compare h2{
+    margin-bottom: var(--space-m);
+  }
+  
+  .compare_table{
+    width: 80%;
+    color: var(--dark);
+    text-align: left;
+    margin: 0 auto;
+  }
+  
+  .compare_table th{
+    font-weight: bold;
+    background: var(--secondary);
+    padding: var(--space-s)  var(--space-m);
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .compare_table tr{
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .compare_table td{
+    padding: var(--space-s) var(--space-m);
+  }
+  
+  .highlight{
+    color: var(--primary);
+    font-weight: bold;
+  }
+  
+  .contact{
+    padding: var(--space-l) var(--space-m);
+    background: linear-gradient(#00664D, #009671);
+    margin-bottom: var(--space-m);
+  }
+  
+  .contact h2{
+    color: white;
+    margin-bottom: var(--space-m);
+  }
+  
+  .contact_form{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .contact_form textarea{
+    width: 47%;
+    resize: none;
+    padding: var(--space-s);
+  }
+  
+  .contact_info{
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact_info label{
+    color: white;
+    padding: var(--space-sx) 0;
+  }
+  
+  .contact_info input{
+    width: 100%;
+    font-size: 0.875rem;
+    padding: var(--space-s);
+    margin-bottom: var(--space-s);
+    border: 0;
+    border-radius: 3px;
+  }
+  
+  .contact_info input[type="email"]{
+    margin-bottom: var(--space-m);
+  }
+  
+  .submit{
+    color: white;
+    background: var(--primary);
+    padding: var(--space-sx) var(--space-m);
+    border: none;
+    border-radius: 2px;
+    align-self: flex-end;
+    cursor: pointer;
+  }
+  
+  .submit:hover{
+    background: #11ddaa;
+  }
+  
+  
+  footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--space-m);
+    margin-bottom: var(--space-l);
+  }
+  
+  footer li a{
+    color: var(--danger);
+    text-decoration: none;
+  }
+  
+  footer li a:hover{
+    text-decoration: underline;
+  }
