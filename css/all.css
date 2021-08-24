@@ -125,7 +125,7 @@ table {
     color: #00aaec;
   }
   
-  header{
+  .header{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -161,7 +161,6 @@ table {
   }
   
   .banner{
-    width: 100%;
     height: 346px;
     background-image: url('https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/banner.png');
     display: flex;
@@ -313,7 +312,7 @@ table {
   }
   
   
-  footer{
+  .footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -321,11 +320,11 @@ table {
     margin-bottom: var(--space-l);
   }
   
-  footer li a{
+  .footer li a{
     color: var(--danger);
     text-decoration: none;
   }
   
-  footer li a:hover{
+  .footer li a:hover{
     text-decoration: underline;
   }
